@@ -1,0 +1,14 @@
+version: '3'
+services:
+  api:
+    build:
+      dockerfile: dockerfiles/Dockerfile.api
+    ports:
+      - "8000:8000"
+  ui:
+    build:
+      dockerfile: dockerfiles/Dockerfile.ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
