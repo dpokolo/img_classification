@@ -4,7 +4,7 @@ services:
     build:
       dockerfile: dockerfiles/Dockerfile.api
     ports:
-      - "8000:8000"
+      - "5000:5000"
   ui:
     build:
       dockerfile: dockerfiles/Dockerfile.ui
