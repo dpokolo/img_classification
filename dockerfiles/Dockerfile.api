@@ -4,4 +4,4 @@ COPY requirements/requirements-api.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY img_classification/api img_classification/api
-ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:5000 ", "img_classification.api.app:app"]
+ENTRYPOINT ["python3", "img_classification/api/app.py"]

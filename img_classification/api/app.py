@@ -4,6 +4,7 @@ from tensorflow.keras.preprocessing import image
 from PIL import Image
 import numpy as np
 import io
+import waitress
 
 app = Flask(__name__)
 
@@ -47,4 +48,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    waitress.serve(app, host="0.0.0.0", port=8000)

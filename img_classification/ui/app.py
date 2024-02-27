@@ -17,7 +17,7 @@ if uploaded_file is not None:
         # Access the uploaded image data
         image_data = uploaded_file.getvalue()
         response = requests.post(
-            'http://localhost:5000/predict',
+            'http://api:8000/predict',
             files={'file': ('image.png', image_data, 'multipart/form-data')}
         )
 
